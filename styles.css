@@ -172,8 +172,22 @@ main a:hover {
 }
 
 .home-header {
+  position: relative;
+  overflow: hidden;
   height: 100vh;
   background: linear-gradient(var(--main-color), var(--second-color));
+
+  @media (max-width: 767.98px) {
+    .hero-img {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .home-header__inner {
+      align-items: center;
+    }
+  }
 }
 
 .home-header__inner {
@@ -183,6 +197,8 @@ main a:hover {
 
 .hero-img {
   max-width: 100%;
+  transition: transform 0.3s ease-out;
+  position: relative;
 }
 
 #menu-btn {
