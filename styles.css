@@ -172,33 +172,35 @@ main a:hover {
 }
 
 .home-header {
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
+  padding-bottom: 2rem;
   height: 100vh;
   background: linear-gradient(var(--main-color), var(--second-color));
-
-  @media (max-width: 767.98px) {
-    .hero-img {
-      margin-bottom: 20px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .home-header__inner {
-      align-items: center;
-    }
-  }
 }
 
 .home-header__inner {
-  height: 100vh;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
   color: var(--menu-bg);
+
+  @media (min-width: 768px) {
+    align-items: center;
+  }
 }
 
 .hero-img {
   max-width: 100%;
+  height: auto;
   transition: transform 0.3s ease-out;
   position: relative;
+
+  @media (max-width: 767.98px) {
+    margin-bottom: 20px;
+  }
 }
 
 #menu-btn {
