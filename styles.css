@@ -123,16 +123,19 @@ main a:hover {
   top: 0;
   background-color: var(--menu-bg);
   z-index: 10;
+
   @media (max-width: 1199.98px) {
     height: 100vh;
     top: -100vh;
     transition: top 0.6s ease-in-out;
+    visibility: hidden;
   }
 }
 
 .menu.show {
   @media (max-width: 1199.98px) {
     top: 0 !important;
+    visibility: visible;
   }
 }
 
