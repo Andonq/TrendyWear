@@ -1,0 +1,206 @@
+:root {
+  --main-text-color: #555;
+  --link-color: #eee;
+  --link-hover-color: #fff;
+  --main-link-color: #333;
+  --main-color: #ffd700;
+  --second-color: #ff7f50;
+  --menu-bg: #e63946;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  color: var(--main-text-color);
+}
+
+/* Логотип */
+.logo img {
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Контакти */
+.contacts a,
+main a {
+  color: var(--main-link-color);
+  text-decoration: none;
+  border-bottom: 2px solid var(--link-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.contacts a:hover,
+main a:hover {
+  color: var(--link-hover-color);
+  border-color: var(--main-text-color);
+}
+
+/* Кнопка покупки */
+.card__buy {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid green;
+  color: green;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.card__buy:hover {
+  background-color: green;
+  color: white;
+  box-shadow: 0px 4px 10px var(--shadow-color);
+}
+
+/* Карточка товару */
+.card__img {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px var(--shadow-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card__img img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.card__img:hover img {
+  transform: scale(1.1);
+}
+
+/* Меню */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--menu-bg);
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0px 4px 8px var(--shadow-color);
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu a {
+  color: var(--link-color);
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background: var(--second-color);
+  color: var(--link-hover-color);
+}
+
+/* Кнопка меню */
+#menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 11;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+}
+
+#menu-btn:hover {
+  background: var(--shadow-color);
+}
+
+#menu-btn .bar1,
+#menu-btn .bar2,
+#menu-btn .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--menu-bg);
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+/* Анімація меню */
+#menu-btn.touch .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+#menu-btn.touch .bar2 {
+  opacity: 0;
+}
+
+#menu-btn.touch .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Головний заголовок */
+.home-header {
+  height: 100vh;
+  background: linear-gradient(to right, var(--main-color), var(--second-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--menu-bg);
+}
+
+.home-header__inner {
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 10px var(--shadow-color);
+}
+
+/* Кнопка */
+.main-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: var(--menu-bg);
+  color: var(--link-color);
+  border: 2px solid var(--menu-bg);
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px var(--shadow-color);
+}
+
+.main-btn:hover {
+  background-color: var(--second-color);
+  color: var(--menu-bg);
+  border-color: var(--menu-bg);
+  box-shadow: 0px 6px 12px var(--shadow-color);
+}
+
+/* Футер */
+footer {
+  background-color: var(--menu-bg);
+  color: var(--main-color);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px -4px 10px var(--shadow-color);
+}
+
+footer a {
+  color: var(--second-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
